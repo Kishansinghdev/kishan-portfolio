@@ -1,1 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Kishan Singh - Senior Software Developer Portfolio">
+<meta name="keywords" content="Laravel Developer, PHP Developer, Python Developer, Full Stack Developer">
+<meta name="author" content="Kishan Singh">
 
+<title>Kishan Singh | Senior Software Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#070b14;
+    color:white;
+    overflow-x:hidden;
+}
+
+body::before{
+    content:'';
+    position:fixed;
+    width:600px;
+    height:600px;
+    background:linear-gradient(135deg,#6c63ff,#00d4ff);
+    filter:blur(180px);
+    opacity:.25;
+    top:-200px;
+    left:-150px;
+    z-index:-1;
+}
+
+body::after{
+    content:'';
+    position:fixed;
+    width:500px;
+    height:500px;
+    background:linear-gradient(135deg,#ff4ecd,#6c63ff);
+    filter:blur(180px);
+    opacity:.18;
+    bottom:-200px;
+    right:-150px;
+    z-index:-1;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+section{
+    padding:100px 0;
+}
+
+.glass{
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+.navbar{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:999;
+    backdrop-filter:blur(20px);
+    background:rgba(7,11,20,.75);
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.nav-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 5%;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:700;
+    color:#00d4ff;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#00d4ff;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.hero h1{
+    font-size:70px;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero span{
+    background:linear-gradient(90deg,#00d4ff,#6c63ff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.hero h2{
+    font-size:30px;
+    color:#c8d2e0;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:#a7b2c2;
+    line-height:1.8;
+    margin-bottom:35px;
+    font-size:18px;
+}
+
+.btn-group{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:14px 30px;
+    border-radius:50px;
+    text-decoration:none;
+    color:white;
+    transition:.4s;
+    font-weight:600;
+}
+
+.primary{
+    background:linear-gradient(135deg,#00d4ff,#6c63ff);
+}
+
+.secondary{
+    border:1px solid rgba(255,255,255,.2);
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#9aa7b8;
+}
+
+.about-card{
+    padding:40px;
+    border-radius:20px;
+}
+
+.about-card p{
+    color:#b5c1cf;
+    line-height:1.9;
+    font-size:17px;
+}
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.skill-card{
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    transition:.4s;
+}
+
+.skill-card:hover{
+    transform:translateY(-10px);
+}
+
+.skill-card h3{
+    font-size:18px;
+}
+
+.timeline{
+    position:relative;
+    max-width:900px;
+    margin:auto;
+}
+
+.timeline::before{
+    content:'';
+    position:absolute;
+    left:50%;
+    top:0;
+    width:2px;
+    height:100%;
+    background:#00d4ff;
+}
+
+.timeline-item{
+    width:50%;
+    padding:20px 40px;
+    position:relative;
+}
+
+.timeline-item:nth-child(odd){
+    left:0;
+    text-align:right;
+}
+
+.timeline-item:nth-child(even){
+    left:50%;
+}
+
+.timeline-content{
+    padding:25px;
+    border-radius:20px;
+}
+
+.timeline-content h3{
+    color:#00d4ff;
+    margin-bottom:10px;
+}
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.project-card{
+    padding:30px;
+    border-radius:20px;
+    transition:.4s;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+}
+
+.project-card h3{
+    margin-bottom:15px;
+}
+
+.project-card p{
+    color:#b5c1cf;
+    margin-bottom:20px;
+    line-height:1.7;
+}
+
+.tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.tag{
+    padding:8px 14px;
+    background:rgba(0,212,255,.12);
+    border-radius:30px;
+    color:#00d4ff;
+    font-size:13px;
+}
+
+.contact-box{
+    max-width:700px;
+    margin:auto;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+}
+
+.contact-box a{
+    color:#00d4ff;
+    text-decoration:none;
+}
+
+.footer{
+    text-align:center;
+    padding:30px;
+    border-top:1px solid rgba(255,255,255,.08);
+    color:#9aa7b8;
+}
+
+.fade{
+    opacity:0;
+    transform:translateY(40px);
+    transition:all .8s ease;
+}
+
+.fade.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:45px;
+}
+
+.hero h2{
+    font-size:22px;
+}
+
+.nav-links{
+    display:none;
+}
+
+.timeline::before{
+    left:20px;
+}
+
+.timeline-item,
+.timeline-item:nth-child(even),
+.timeline-item:nth-child(odd){
+    width:100%;
+    left:0;
+    text-align:left;
+    padding-left:50px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+<div class="nav-content">
+<div class="logo">KS.</div>
+
+<div class="nav-links">
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#experience">Experience</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+</nav>
+
+<section class="hero">
+<div class="container">
+
+<div class="hero-content fade">
+<h1>Hi, I'm <span>Kishan Singh</span></h1>
+
+<h2>Senior Software Developer</h2>
+
+<p>
+Experienced Software Developer with 5+ years of expertise in designing,
+developing and optimizing enterprise-grade web applications, fleet
+management systems, CRM platforms and modern AI-powered applications.
+Passionate about scalable architectures, clean code and high-performance systems.
+</p>
+
+<div class="btn-group">
+<a href="resume.pdf" class="btn primary" download>
+Download Resume
+</a>
+
+<a href="#contact" class="btn secondary">
+Contact Me
+</a>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="about">
+<div class="container">
+
+<div class="section-title">
+<h2>About Me</h2>
+<p>Professional Summary</p>
+</div>
+
+<div class="about-card glass fade">
+<p>
+Senior Software Developer with 5+ years of experience building scalable web
+applications, backend services and enterprise software solutions.
+Specialized in Laravel, PHP, Python, PostgreSQL, MySQL, Redis and Docker.
+Experienced in designing secure RBAC systems, REST APIs, database
+optimization, real-time monitoring dashboards and modern full-stack
+applications using Next.js and JavaScript ecosystems.
+</p>
+</div>
+
+</div>
+</section>
+
+<section id="skills">
+<div class="container">
+
+<div class="section-title">
+<h2>Technical Skills</h2>
+<p>Technologies I Work With</p>
+</div>
+
+<div class="skills-grid">
+
+<div class="skill-card glass fade"><h3>PHP</h3></div>
+<div class="skill-card glass fade"><h3>Laravel</h3></div>
+<div class="skill-card glass fade"><h3>Python</h3></div>
+<div class="skill-card glass fade"><h3>PostgreSQL</h3></div>
+<div class="skill-card glass fade"><h3>MySQL</h3></div>
+<div class="skill-card glass fade"><h3>Redis</h3></div>
+<div class="skill-card glass fade"><h3>Docker</h3></div>
+<div class="skill-card glass fade"><h3>JavaScript</h3></div>
+<div class="skill-card glass fade"><h3>jQuery</h3></div>
+<div class="skill-card glass fade"><h3>Next.js</h3></div>
+<div class="skill-card glass fade"><h3>REST APIs</h3></div>
+<div class="skill-card glass fade"><h3>Git & Linux</h3></div>
+
+</div>
+
+</div>
+</section>
+
+<section id="experience">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Experience</h2>
+<p>Professional Journey</p>
+</div>
+
+<div class="timeline">
+
+<div class="timeline-item fade">
+<div class="timeline-content glass">
+<h3>Senior Software Developer</h3>
+<p>
+Architecting scalable enterprise applications, backend systems,
+API integrations, database optimization and cloud-ready solutions.
+</p>
+</div>
+</div>
+
+<div class="timeline-item fade">
+<div class="timeline-content glass">
+<h3>5+ Years Experience</h3>
+<p>
+Delivered fleet management systems, CRM solutions,
+lead management platforms and AI-powered applications.
+</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Featured Projects</h2>
+<p>Recent Professional Work</p>
+</div>
+
+<div class="projects-grid">
+
+<div class="project-card glass fade">
+<h3>Electric Vehicle Fleet Management System</h3>
+
+<p>
+Real-time GPS tracking platform for electric bus fleet operations,
+route scheduling, vehicle monitoring dashboard, RBAC security,
+performance optimization and operational analytics.
+</p>
+
+<div class="tags">
+<span class="tag">Laravel</span>
+<span class="tag">PHP</span>
+<span class="tag">MySQL</span>
+<span class="tag">GPS Tracking</span>
+<span class="tag">RBAC</span>
+</div>
+
+</div>
+
+<div class="project-card glass fade">
+<h3>Lead Punch Management System</h3>
+
+<p>
+Advanced lead management platform with sales workflow automation,
+lead tracking, reporting dashboard, role-based permissions and
+business process optimization.
+</p>
+
+<div class="tags">
+<span class="tag">Laravel</span>
+<span class="tag">PHP</span>
+<span class="tag">MySQL</span>
+<span class="tag">CRM</span>
+<span class="tag">Dashboard</span>
+</div>
+
+</div>
+
+<div class="project-card glass fade">
+<h3>AI Blog CMS</h3>
+
+<p>
+Modern AI-powered content management platform built with Next.js,
+Python APIs, PostgreSQL and Dockerized architecture with scalable deployment.
+</p>
+
+<div class="tags">
+<span class="tag">Next.js</span>
+<span class="tag">Python</span>
+<span class="tag">PostgreSQL</span>
+<span class="tag">Docker</span>
+<span class="tag">AI</span>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<div class="container">
+
+<div class="section-title">
+<h2>Contact Me</h2>
+<p>Let's Build Something Amazing</p>
+</div>
+
+<div class="contact-box glass fade">
+
+<h3>Email</h3>
+<p>
+<a href="mailto:kishan@example.com">
+kishan@example.com
+</a>
+</p>
+
+<br>
+
+<h3>LinkedIn</h3>
+<p>
+<a href="#">
+linkedin.com/in/kishan-singh
+</a>
+</p>
+
+<br>
+
+<h3>GitHub</h3>
+<p>
+<a href="#">
+github.com/kishan-singh
+</a>
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+© 2026 Kishan Singh | Senior Software Developer
+</footer>
+
+<script>
+
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+});
+},{
+threshold:0.15
+});
+
+document.querySelectorAll('.fade').forEach(el=>{
+observer.observe(el);
+});
+
+</script>
+
+</body>
+</html>
