@@ -258,14 +258,16 @@ section{
 
 .projects-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
     gap:30px;
+    align-items:stretch;
 }
 
 .project-card{
-    padding:30px;
-    border-radius:20px;
-    transition:.4s;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
 }
 
 .project-card:hover{
@@ -380,13 +382,13 @@ section{
 <div class="hero-content fade">
 <h1>Hi, I'm <span>Kishan Singh</span></h1>
 
-<h2>Senior Software Developer</h2>
+<h2>Software Developer | Laravel | PHP | Python</h2>
 
 <p>
-Experienced Software Developer with 5+ years of expertise in designing,
-developing and optimizing enterprise-grade web applications, fleet
-management systems, CRM platforms and modern AI-powered applications.
-Passionate about scalable architectures, clean code and high-performance systems.
+Results-driven Software Developer with 4+ years of experience developing
+enterprise-grade web applications, RESTful APIs, fleet management systems
+and fintech platforms. Expertise in Laravel, PHP, MySQL, PostgreSQL,
+Python and scalable backend architecture.
 </p>
 
 <div class="btn-group">
@@ -414,12 +416,17 @@ Contact Me
 
 <div class="about-card glass fade">
 <p>
-Senior Software Developer with 5+ years of experience building scalable web
-applications, backend services and enterprise software solutions.
-Specialized in Laravel, PHP, Python, PostgreSQL, MySQL, Redis and Docker.
-Experienced in designing secure RBAC systems, REST APIs, database
-optimization, real-time monitoring dashboards and modern full-stack
-applications using Next.js and JavaScript ecosystems.
+Software Developer with 4+ years of professional experience delivering
+scalable business applications, transportation management systems and
+financial software solutions.
+
+Specialized in Laravel, PHP, MySQL, PostgreSQL, Python and REST API
+development. Strong experience in database optimization, RBAC security,
+MVC architecture and performance tuning for enterprise applications.
+
+Currently working on Delhi Transport Corporation (DTC) fleet
+digitization projects, focusing on real-time fleet monitoring,
+GPS tracking and operational dashboards.
 </p>
 </div>
 
@@ -436,18 +443,24 @@ applications using Next.js and JavaScript ecosystems.
 
 <div class="skills-grid">
 
-<div class="skill-card glass fade"><h3>PHP</h3></div>
+<div class="skill-card glass fade"><h3>PHP 8.2
+</h3></div>
 <div class="skill-card glass fade"><h3>Laravel</h3></div>
 <div class="skill-card glass fade"><h3>Python</h3></div>
-<div class="skill-card glass fade"><h3>PostgreSQL</h3></div>
-<div class="skill-card glass fade"><h3>MySQL</h3></div>
-<div class="skill-card glass fade"><h3>Redis</h3></div>
-<div class="skill-card glass fade"><h3>Docker</h3></div>
 <div class="skill-card glass fade"><h3>JavaScript</h3></div>
-<div class="skill-card glass fade"><h3>jQuery</h3></div>
-<div class="skill-card glass fade"><h3>Next.js</h3></div>
-<div class="skill-card glass fade"><h3>REST APIs</h3></div>
-<div class="skill-card glass fade"><h3>Git & Linux</h3></div>
+<div class="skill-card glass fade"><h3>React.js
+</h3></div>
+<div class="skill-card glass fade"><h3>Next.js
+</h3></div>
+<div class="skill-card glass fade"><h3>MySQL</h3></div>
+<div class="skill-card glass fade"><h3>PostgreSQL</h3></div>
+<div class="skill-card glass fade"><h3>REST APIs / FAST APIs
+</h3></div>
+<div class="skill-card glass fade"><h3>Git</h3></div>
+<div class="skill-card glass fade"><h3>MVC Architecture
+</h3></div>
+<div class="skill-card glass fade"><h3>Database Optimization
+</h3></div>
 
 </div>
 
@@ -456,36 +469,37 @@ applications using Next.js and JavaScript ecosystems.
 
 <section id="experience">
 
-<div class="container">
-
-<div class="section-title">
-<h2>Experience</h2>
-<p>Professional Journey</p>
-</div>
-
-<div class="timeline">
-
-<div class="timeline-item fade">
+<div class<div class="timeline-item fade">
 <div class="timeline-content glass">
-<h3>Senior Software Developer</h3>
-<p>
-Architecting scalable enterprise applications, backend systems,
-API integrations, database optimization and cloud-ready solutions.
-</p>
+<h3>Software Developer</h3>
+<h4>QT Loads Tech & Transit Pvt Ltd</h4>
+<p>Dec 2024 - Present</p>
+
+<ul>
+<li>Developed scalable Laravel applications.</li>
+<li>Implemented GPS tracking and route scheduling.</li>
+<li>Built fleet monitoring dashboards.</li>
+<li>Optimized MySQL performance and indexing.</li>
+<li>Designed RBAC and security modules.</li>
+</ul>
 </div>
 </div>
 
 <div class="timeline-item fade">
 <div class="timeline-content glass">
-<h3>5+ Years Experience</h3>
-<p>
-Delivered fleet management systems, CRM solutions,
-lead management platforms and AI-powered applications.
-</p>
-</div>
-</div>
+<h3>Associate Web Developer</h3>
+<h4>Finaptech Financial Services Pvt Ltd</h4>
+<p>Jul 2022 - Sept 2024</p>
 
+<ul>
+<li>Developed accounting and fintech applications.</li>
+<li>Built REST APIs and reporting systems.</li>
+<li>Migrated legacy systems to Laravel MVC.</li>
+<li>Maintained production applications.</li>
+</ul>
 </div>
+</div>="container">
+
 
 </div>
 
@@ -497,18 +511,23 @@ lead management platforms and AI-powered applications.
 
 <div class="section-title">
 <h2>Featured Projects</h2>
-<p>Recent Professional Work</p>
+<p>Enterprise Applications & Professional Projects</p>
 </div>
 
 <div class="projects-grid">
 
+<!-- Project 1 -->
+
 <div class="project-card glass fade">
-<h3>Electric Vehicle Fleet Management System</h3>
+
+<h3>DTC Fleet Digitization System</h3>
 
 <p>
-Real-time GPS tracking platform for electric bus fleet operations,
-route scheduling, vehicle monitoring dashboard, RBAC security,
-performance optimization and operational analytics.
+Developed and maintained scalable Laravel-based backend architecture
+for Delhi Transport Corporation fleet digitization initiatives.
+Implemented live GPS tracking, route scheduling, fleet monitoring
+dashboards and operational reporting modules. Optimized MySQL queries,
+indexing strategies and security controls for high-volume fleet data.
 </p>
 
 <div class="tags">
@@ -516,18 +535,71 @@ performance optimization and operational analytics.
 <span class="tag">PHP</span>
 <span class="tag">MySQL</span>
 <span class="tag">GPS Tracking</span>
+<span class="tag">Route Scheduling</span>
 <span class="tag">RBAC</span>
 </div>
 
 </div>
 
+<!-- Project 2 -->
+
 <div class="project-card glass fade">
+
+<h3>SimplyKhata Financial Platform</h3>
+
+<p>
+Built and enhanced accounting and financial management modules for
+business operations. Developed scalable REST APIs, reporting systems,
+transaction workflows and backend services to streamline financial
+record management and reporting.
+</p>
+
+<div class="tags">
+<span class="tag">Laravel</span>
+<span class="tag">PHP</span>
+<span class="tag">MySQL</span>
+<span class="tag">REST API</span>
+<span class="tag">Finance</span>
+<span class="tag">Reporting</span>
+</div>
+
+</div>
+
+<!-- Project 3 -->
+
+<div class="project-card glass fade">
+
+<h3>Sampark CRM Platform</h3>
+
+<p>
+Migrated legacy systems to Laravel MVC architecture, improving
+performance, maintainability and scalability. Developed secure APIs,
+optimized database operations and implemented business workflow
+automation features for customer engagement management.
+</p>
+
+<div class="tags">
+<span class="tag">Laravel</span>
+<span class="tag">MVC</span>
+<span class="tag">MySQL</span>
+<span class="tag">CRM</span>
+<span class="tag">API Integration</span>
+<span class="tag">Optimization</span>
+</div>
+
+</div>
+
+<!-- Project 4 -->
+
+<div class="project-card glass fade">
+
 <h3>Lead Punch Management System</h3>
 
 <p>
-Advanced lead management platform with sales workflow automation,
-lead tracking, reporting dashboard, role-based permissions and
-business process optimization.
+Designed and developed a lead management solution featuring lead
+tracking, sales workflow automation, reporting dashboards and role
+based access control. Improved lead visibility and operational
+efficiency through centralized management.
 </p>
 
 <div class="tags">
@@ -536,16 +608,22 @@ business process optimization.
 <span class="tag">MySQL</span>
 <span class="tag">CRM</span>
 <span class="tag">Dashboard</span>
+<span class="tag">RBAC</span>
 </div>
 
 </div>
+
+<!-- Project 5 -->
 
 <div class="project-card glass fade">
+
 <h3>AI Blog CMS</h3>
 
 <p>
-Modern AI-powered content management platform built with Next.js,
-Python APIs, PostgreSQL and Dockerized architecture with scalable deployment.
+Modern AI-powered blog management platform built using Next.js,
+Python APIs, PostgreSQL and Docker. Features content management,
+authentication, category management and scalable containerized
+deployment architecture.
 </p>
 
 <div class="tags">
@@ -554,6 +632,7 @@ Python APIs, PostgreSQL and Dockerized architecture with scalable deployment.
 <span class="tag">PostgreSQL</span>
 <span class="tag">Docker</span>
 <span class="tag">AI</span>
+<span class="tag">CMS</span>
 </div>
 
 </div>
@@ -563,7 +642,6 @@ Python APIs, PostgreSQL and Dockerized architecture with scalable deployment.
 </div>
 
 </section>
-
 <section id="contact">
 
 <div class="container">
@@ -574,32 +652,29 @@ Python APIs, PostgreSQL and Dockerized architecture with scalable deployment.
 </div>
 
 <div class="contact-box glass fade">
-
 <h3>Email</h3>
 <p>
-<a href="mailto:kishan@example.com">
-kishan@example.com
+<a href="mailto:singhkishan19988@gmail.com">
+singhkishan19988@gmail.com
 </a>
 </p>
 
-<br>
+<h3>Phone</h3>
+<p>
+<a href="tel:+916393586266">
++91 6393586266
+</a>
+</p>
 
 <h3>LinkedIn</h3>
 <p>
-<a href="#">
-linkedin.com/in/kishan-singh
+<a href="https://linkedin.com/in/kishan-singh-22933719b" target="_blank">
+linkedin.com/in/kishan-singh-22933719b
 </a>
 </p>
 
-<br>
-
-<h3>GitHub</h3>
-<p>
-<a href="#">
-github.com/kishan-singh
-</a>
-</p>
-
+<h3>Location</h3>
+<p>Dwarka, Delhi, India</p>
 </div>
 
 </div>
