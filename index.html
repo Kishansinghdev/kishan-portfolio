@@ -305,11 +305,6 @@ footer a:hover{ color:var(--text); }
 .reveal.show{ opacity:1; transform:none; }
 .d1{ transition-delay:.08s; } .d2{ transition-delay:.16s; } .d3{ transition-delay:.24s; } .d4{ transition-delay:.32s; }
 
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{ animation:none !important; transition:none !important; }
-  .reveal{ opacity:1; transform:none; }
-  .skill .bar b{ width:var(--w); }
-}
 
 /* ================= RESPONSIVE ================= */
 @media (max-width:1024px){
@@ -674,7 +669,7 @@ footer a:hover{ color:var(--text); }
 const words = ['Software Developer', 'Laravel Developer', 'PHP Developer', 'Python Developer', 'Full Stack Developer'];
 const typedEl = document.getElementById('typed');
 let wi = 0, ci = 0, deleting = false;
-const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const reduce = false; // always run animations, on desktop and mobile
 function type(){
   const w = words[wi];
   typedEl.textContent = w.slice(0, ci);
